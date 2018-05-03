@@ -41,7 +41,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:none;');
-        timeDate.setAttribute('style', 'display:block');
+        timeDate.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
     }
