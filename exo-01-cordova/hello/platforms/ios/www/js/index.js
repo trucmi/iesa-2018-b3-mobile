@@ -29,15 +29,19 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
     },
+},
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
+        var timeDate = document.getElementById("timestamp");
+        timeDate.innerHTML = new Date();
 
         listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        receivedElement.setAttribute('style', 'display:none;');
+        timeDate.setAttribute('style', 'display:block');
 
         console.log('Received Event: ' + id);
     }
